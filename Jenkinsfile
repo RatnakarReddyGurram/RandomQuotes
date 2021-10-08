@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'make package'
+                
             }
         }
         stage('Test') {
