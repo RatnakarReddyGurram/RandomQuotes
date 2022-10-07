@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             when { tag "release-*" }
             steps {
-                def gitTag = "$TAG_NAME"
+                gitTag = "$TAG_NAME"
                 def parts = gitTag.split('-')
                 version = parts[1]
                 echo version
