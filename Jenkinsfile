@@ -24,6 +24,7 @@ pipeline {
                 }
                 echo version
                 echo "Building $TAG_NAME"
+                echo "Branch to build $BRANCH_NAME"
                 echo 'Deploying only because this commit is tagged...'
                 
             }
