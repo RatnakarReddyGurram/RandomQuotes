@@ -22,9 +22,8 @@ pipeline {
                 def parts = gitTag.split('-')
                 version = parts[1]
                 }
-                echo version
                 echo "Building $TAG_NAME"
-                echo "Branch to build $BRANCH_NAME"
+                echo version
                 echo 'Deploying only because this commit is tagged...'
                 
             }
