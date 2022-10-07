@@ -17,13 +17,15 @@ pipeline {
         stage('Deploy') {
             when { tag "release-*" }
             steps {
+                script{
                 gitTag = "$TAG_NAME"
                 def parts = gitTag.split('-')
                 version = parts[1]
+                }
                 echo version
                 echo "Building $TAG_NAME"
                 echo 'Deploying only because this commit is tagged...'
-               
+                
             }
         }
     }
