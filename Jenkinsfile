@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             when { tag "release-*" }
             steps {
-                
+                echo "Building $TAG_NAME"
                 echo 'Deploying only because this commit is tagged...'
                
             }
