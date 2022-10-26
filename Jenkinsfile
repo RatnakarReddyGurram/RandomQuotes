@@ -29,7 +29,7 @@ pipeline {
             }
         }
         stage('Deploy To PREPOD') {
-            when { tag "*-main" }
+            when { tag "*-prepod" }
             steps {
                 script{
                 gitTag = "$TAG_NAME"
