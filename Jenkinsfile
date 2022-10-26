@@ -28,11 +28,6 @@ pipeline {
                 
             }
         }
-	stage('Test') {
-            steps {
-               echo 'Testing application tagged...'
-            }
-        }
         stage('Deploy To PREPOD') {
             when { tag "*-main" }
             steps {
